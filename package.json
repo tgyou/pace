@@ -7,7 +7,7 @@
     "Adam Schwartz <adam.flynn.schwartz@gmail.com>"
   ],
   "license": "MIT",
-  "main": "pace.js",
+  "main": "./pace.js",
   "repository": {
     "type": "git",
     "url": "git://github.com/HubSpot/pace.git"
