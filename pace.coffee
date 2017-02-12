@@ -205,6 +205,7 @@ class Bar
       document.body.className = document.body.className.replace /pace-done/g, ''
       if not /pace-running/.test document.body.className
         document.body.className += ' pace-running'
+        document.body.className = document.body.className.trim()
 
       @el.innerHTML = '''
       <div class="pace-progress">
@@ -224,9 +225,11 @@ class Bar
 
     el.className = el.className.replace 'pace-active', ''
     el.className += ' pace-inactive'
+    el.className = el.className.trim().replace(/\ +/, ' ');
 
     document.body.className = document.body.className.replace 'pace-running', ''
     document.body.className += ' pace-done'
+    document.body.className = document.body.className.trim()
 
   update: (prog) ->
     @progress = prog
